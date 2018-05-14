@@ -1,7 +1,6 @@
 const express = require('express');
 const F = require('./module/fibonacci.js');
 const app = express();
-let valor = 0;
 
 app.get('/fibonacci/:n',  (req, res, next) => {
   F.fibonacci(Math.floor(req.params.n), (err, val) => {
